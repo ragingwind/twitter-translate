@@ -1,0 +1,23 @@
+{
+	"name": "Twitter Translate",
+	"version": "1.0.28",
+	"description": "Translate tweet into a language of your choice at Twitter.com.",
+	"content_scripts": [
+		{
+			"js": ["debug.js", "jquery-1.4.3.js", "twitter.js", "contentscript.js"],
+			"css": ["twitter.css"],
+			"matches": ["http://twitter.com/*", "https://twitter.com/*"]
+		}
+	],
+	"background_page": "background.html",
+  	"permissions": [
+    	"tabs",
+		"http://*/*", "https://*/*",
+		"http://twitter.com/*", "https://twitter.com/*", 
+		"http://ajax.googleapis.com/*"
+  	],
+	"icons": {
+		"48": "image/icon.48.png",
+		"128": "image/icon.128.png"
+	}
+}

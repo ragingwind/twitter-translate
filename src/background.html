@@ -1,0 +1,45 @@
+<!--
+ * Copyright (c) 2010 devnight.net. All rights reserved.  Use of this
+ * source code is governed by a MIT license that can be found in the
+ * LICENSE file.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script src="jquery-1.4.3.js"></script>
+<script src="debug.js"></script>
+<script>
+logging.level = logging.NO;
+
+var app = {
+	fetchTranslatedTweet: function(tweet, origin, target, callback) {
+		tweet = encodeURIComponent(tweet);
+		var url = "https://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=" + tweet + "&langpair=" + origin + "|" + target;
+		$.getJSON((url), function(r) {
+			// for debugging
+			logging.debug(r.responseStatus);
+
+			if (r.responseStatus == 200) {
+				logging.debug(r.responseData.translatedText);
+				callback({id:"translation", tweet:r.responseData.translatedText});
+			}
+			else {
+				callback({id:"translation", tweet:""});
+			}		
+		});
+	},	
+	onRequest: function(request, sender, callback) {
+		logging.debug("app got a request: " + request.id);
+		if (request.id == "translation") {
+			logging.debug("request tweet translate to google. translate into ", request.targetlang);
+			var tweet = app.fetchTranslatedTweet(request.tweet, "", request.targetlang, callback);
+
+		}
+	}
+};
+
+chrome.extension.onRequest.addListener(app.onRequest);
+</script>
+</head>
+</html>

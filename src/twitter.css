@@ -1,0 +1,121 @@
+/*
+ * Copyright (c) 2010 devnight.net. All rights reserved.  Use of this
+ * source code is governed by a MIT license that can be found in the
+ * LICENSE file.
+ */
+
+#tw-tr-option {
+	text-align:center;
+	display:block;
+	position: relative;
+}
+
+#tw-tr-option-bg {
+	width:100%;
+	height:40px;
+	padding:0px;
+	background-color: #00A0D1;
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#00A0D1),to(#008DB8));
+	position:absolute;
+}
+
+#tw-tr-option-top-bar {
+	margin: 0 auto;
+	min-width: 1000px;
+	max-width: 1120px;
+	text-align: left;
+}
+
+#tw-tr-option-inside {
+	min-width: 920px;
+	max-width: 1040px;
+	margin: 0 40px;
+	position: relative;
+	padding: 0px;
+	display: block;
+}
+
+#tw-tr-option-logo {
+	float:left;
+}
+
+#tw-tr-option-title {
+	margin: 13px 5px 0 25px;
+	float:left;
+	font: 15px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:#eff;
+}
+
+#tw-tr-option-lang-list {
+	margin: 12px 0px 0 0px;
+	float:left;
+	font: 15px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:#eff;
+}
+
+#tw-tr-option-lang-select {
+	text-decoration:none;
+	height:20px;
+	border: 1px solid black;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: black;
+	border-right-color: black;
+	border-bottom-color: black;
+	border-left-color: black;
+	-webkit-border-radius: 4px;
+	font: 13px 'lucida grande', tahoma, verdana, arial, sans-serif;
+	width: 120px;
+	padding: 6px 6px 4px 6px;
+	color: #333;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 0 #444;
+	border-top-left-radius: 4px 4px;
+	border-top-right-radius: 4px 4px;
+	border-bottom-right-radius: 4px 4px;
+	border-bottom-left-radius: 4px 4px;
+}
+
+#tw-tr-option-close-button-box {
+	margin: 12px 15px 0 0;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#tw-popup-banner {
+	margin-top: -2px;
+}
+
+#tw-popup {
+	min-width:200px;
+	max-width:400px;
+	padding: 0px 6px 5px 6px;
+	background-color: #FAFAFA;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 0;
+	-webkit-border-bottom-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	border-bottom: 1px solid #EBEBEB;
+	background: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+}
+
+#tw-popup-message {
+	width:100%;
+	min-height: 36px;
+	clear: both;
+	font-size: 13px;
+	line-height: 17px;
+	-webkit-border-bottom-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	background: rgba(255, 255, 255, 1.0);
+}
+
+#tw-popup-message-inner {
+	margin:15px 10px 10px 10px;
+}
